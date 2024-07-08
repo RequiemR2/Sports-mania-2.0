@@ -5,11 +5,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure the body and html elements take full height */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f8f8f8;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -24,13 +31,20 @@ header h1 {
     font-size: 2.5em;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
@@ -40,7 +54,13 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+}
+
 main {
+    flex: 1; /* Take up remaining space in the middle */
     padding: 20px;
 }
 
@@ -54,17 +74,17 @@ section h2 {
     margin-bottom: 10px;
 }
 
-.contacts-heading {
+.product-heading {
     text-align: center;
 }
 
-.contacts-container {
+.product-container {
     display: flex; /* Use flexbox for horizontal alignment */
     justify-content: center; /* Center align items horizontally */
     flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
 }
 
-.contacts {
+.product {
     background: white;
     padding: 20px;
     margin: 10px;
@@ -73,17 +93,46 @@ section h2 {
     text-align: center; /* Center content */
 }
 
-.contacts h3 {
+.product h3 {
     font-size: 1.5em;
     margin-bottom: 5px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
 }
 
 footer {
     background-color: #333;
     color: white;
-    text-align: center;
     padding: 10px 0;
+    width: 100%;
     position: relative;
     bottom: 0;
-    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info section {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer-info section h2 {
+    font-size: 1.2em; /* Smaller font size */
+}
+
+.footer-info section p {
+    font-size: 0.9em; /* Smaller font size */
 }
