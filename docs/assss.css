@@ -91,6 +91,12 @@ section h2 {
     border: 1px solid #ddd;
     width: 300px; /* Fixed width for each product */
     text-align: center; /* Center content */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.product:hover {
+    border-color: #4CAF50; /* Green border color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
 .product h3 {
@@ -102,6 +108,13 @@ section h2 {
     width: 100%;
     height: 200px; /* Fixed height */
     object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.product p1, .product p {
+    font-size: 2em; /* Large font size for prices */
+    color: red; /* Red color for prices */
+    display: block; /* Make prices display as block elements */
+    margin-top: 10px;
 }
 
 footer {
@@ -135,4 +148,30 @@ footer {
 
 .footer-info section p {
     font-size: 0.9em; /* Smaller font size */
+}
+
+/* About Us and Contact Sections */
+.footer-sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer-sections section {
+    width: 45%; /* Each section takes up about half the space */
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.footer-sections h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.footer-sections p {
+    font-size: 1em;
 }
