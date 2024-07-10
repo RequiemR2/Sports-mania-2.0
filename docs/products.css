@@ -7,6 +7,7 @@
 
 html, body {
     height: 100%; /* Ensure the body and html elements take full height */
+    overflow-y: auto; /* Enable scrolling */
 }
 
 body {
@@ -61,8 +62,6 @@ nav ul li img {
 main {
     flex: 1; /* Take up remaining space in the middle */
     padding: 20px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: calc(100vh - 180px); /* Limit the height and adjust as needed */
 }
 
 section {
@@ -113,6 +112,29 @@ section h2 {
     font-size: 2em; /* Large font size for prices */
     color: red; /* Red color for prices */
     margin-top: 10px;
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.rating .star {
+    font-size: 2em; /* Large font size for stars */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #ccc; /* Default star color */
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star,
+.rating .star.selected,
+.rating .star.selected ~ .star {
+    color: #f39c12; /* Highlight color for stars */
+}
+
+.review-count {
+    font-size: 1em;
+    color: #333;
+    margin-left: 10px;
 }
 
 footer {
